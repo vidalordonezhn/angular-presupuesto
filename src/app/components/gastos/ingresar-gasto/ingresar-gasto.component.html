@@ -1,0 +1,14 @@
+<h4 class="text-center">Ingresar gasto</h4>
+<br>
+<div class="text-center" *ngIf="formularioIncorrecto">
+    <span class="badge bg-danger textError">{{textoIncorrecto | uppercase}}</span>
+</div>
+<div class="form-group mb-4">
+    <label for="gasto">Gasto</label>
+    <input type="text" [(ngModel)]="nombreGasto" id="gasto" placeholder="Ej: comida.." class="form-control form-control-lg">
+</div>
+<div class="form-group mb-4">
+    <label for="cantidad">Cantidad</label>
+    <input type="number" [(ngModel)]="cantidad" id="cantidad" placeholder="Ej: 200" class="form-control form-control-lg">
+</div>
+<button class="btn btn-secondary btn-lg btn-block mt-2" (click)="agregarGasto()">Agregar</button>
